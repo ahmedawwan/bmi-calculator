@@ -14,7 +14,7 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   Color maleCardColor = kInactiveCardColor;
   Color femaleCardColor = kInactiveCardColor;
-  Gender? selectedGender;
+  Gender? _selectedGender;
   double _height = 170.0;
 
   @override
@@ -33,7 +33,7 @@ class _InputPageState extends State<InputPage> {
               children: <Widget>[
                 Expanded(
                   child: ReusableCard(
-                    color: selectedGender == Gender.male
+                    color: _selectedGender == Gender.male
                         ? maleCardColor = kActiveCardColor
                         : maleCardColor = kInactiveCardColor,
                     cardChild: IconContent(
@@ -42,14 +42,14 @@ class _InputPageState extends State<InputPage> {
                     ),
                     onPress: () {
                       setState(() {
-                        selectedGender = Gender.male;
+                        _selectedGender = Gender.male;
                       });
                     },
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
-                    color: selectedGender == Gender.female
+                    color: _selectedGender == Gender.female
                         ? femaleCardColor = kActiveCardColor
                         : femaleCardColor = kInactiveCardColor,
                     cardChild: IconContent(
@@ -58,7 +58,7 @@ class _InputPageState extends State<InputPage> {
                     ),
                     onPress: () {
                       setState(() {
-                        selectedGender = Gender.female;
+                        _selectedGender = Gender.female;
                       });
                     },
                   ),
