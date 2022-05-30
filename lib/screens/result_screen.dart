@@ -17,18 +17,16 @@ class ResultScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('BMI CALCULATOR'),
-        centerTitle: true,
-        backgroundColor: kPrimaryColor,
-      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          const Expanded(
-            child: Text(
-              "Your Result",
-              style: kTitleTextStyle,
+          const Padding(
+            padding: EdgeInsets.only(top: 20.0),
+            child: Expanded(
+              child: Text(
+                "Your Result",
+                style: kTitleTextStyle,
+              ),
             ),
           ),
           Expanded(

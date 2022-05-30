@@ -26,11 +26,11 @@ class CalculatorBrain {
 
   String getInterpretation() {
     if (_bmi > 25) {
-      return "You are overweight";
+      return "You are overweight, try to exercise more";
     } else if (_bmi > 18.5) {
       return "Your BMI is perfect";
     } else {
-      return "You are underweight";
+      return "You are underweight, eat more";
     }
   }
 }
