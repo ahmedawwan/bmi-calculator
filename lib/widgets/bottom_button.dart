@@ -15,14 +15,18 @@ class BottomButton extends StatelessWidget {
         onPressed();
       },
       child: Container(
-        padding: const EdgeInsets.only(bottom: 20.0),
+        padding: const EdgeInsets.only(bottom: 10.0),
         child: Center(
           child: Text(
             buttonText,
             style: kLargeButtonStyle,
           ),
         ),
-        color: kSecondaryColor,
+        decoration: const BoxDecoration(
+          borderRadius: BorderRadius.only(
+              topRight: Radius.circular(10), topLeft: Radius.circular(10)),
+          color: kSecondaryColor,
+        ),
         margin: const EdgeInsets.only(top: 10),
         height: kBottomContainerHeight,
         width: double.infinity,

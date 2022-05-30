@@ -1,8 +1,7 @@
 import 'dart:async';
-import 'package:bmi_calculator/constant/constant.dart';
-import 'package:bmi_calculator/widgets/icon_content.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../constant/constant.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -18,18 +17,42 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
+    Timer(const Duration(seconds: 1), () async {
+      setState(() {
+        _visible = true;
+      });
+    });
     startTimer();
   }
 
+  bool _visible = false;
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        color: kPrimaryColor,
-        child: Center(
-          child: IconContent(
-            icon: FontAwesomeIcons.weightScale,
-            label: "BMI Calculator",
+    return Material(
+      child: AnimatedOpacity(
+        opacity: _visible ? 1.0 : 0.0,
+        duration: const Duration(milliseconds: 1000),
+        child: Container(
+          color: kPrimaryColor,
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'assets/images/logo.png',
+                  width: MediaQuery.of(context).size.width * 0.3,
+                ),
+                const SizedBox(
+                  height: 10.0,
+                ),
+                const Text(
+                  "Calculate your BMI",
+                  style: kLabelTextStyle,
+                ),
+              ],
+            ),
           ),
         ),
       ),

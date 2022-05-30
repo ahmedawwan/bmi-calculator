@@ -10,30 +10,37 @@ const Color kButtonBackgroundColor = Color(0xff4c4f5e);
 const kLabelTextStyle = TextStyle(
   fontSize: 18.0,
   color: Color(0xFF8D8E98),
+  fontFamily: "NotoSans",
 );
 const kNumberTextStyle = TextStyle(
   fontSize: 50.0,
   fontWeight: FontWeight.w900,
+  fontFamily: "NotoSans",
 );
 const kLargeButtonStyle = TextStyle(
   fontSize: 25.0,
   fontWeight: FontWeight.bold,
+  fontFamily: "NotoSans",
 );
 const kTitleTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
   fontSize: 50.0,
+  fontFamily: "NotoSans",
 );
 const kResultStyle = TextStyle(
   color: Color(0xff24d876),
   fontSize: 22.0,
   fontWeight: FontWeight.bold,
+  fontFamily: "NotoSans",
 );
 
 const kBMIStyle = TextStyle(
   fontWeight: FontWeight.bold,
   fontSize: 100.0,
+  fontFamily: "NotoSans",
 );
 
 const kBodyTextStyle = TextStyle(
   fontSize: 22.0,
+  fontFamily: "NotoSans",
 );

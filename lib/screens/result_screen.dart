@@ -20,9 +20,9 @@ class ResultScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          const Padding(
-            padding: EdgeInsets.only(top: 20.0),
-            child: Expanded(
+          const Expanded(
+            child: Padding(
+              padding: EdgeInsets.only(top: 36.0),
               child: Text(
                 "Your Result",
                 style: kTitleTextStyle,

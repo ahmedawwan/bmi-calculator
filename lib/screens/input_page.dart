@@ -120,6 +120,7 @@ class _InputPageState extends State<InputPage> {
                     onPress: () {},
                     color: kInactiveCardColor,
                     cardChild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const Text(
                           'WEIGHT',
@@ -162,6 +163,7 @@ class _InputPageState extends State<InputPage> {
                     onPress: () {},
                     color: kInactiveCardColor,
                     cardChild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const Text(
                           'Age',
